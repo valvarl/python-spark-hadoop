@@ -1,6 +1,6 @@
 ## Dataset
 
-[https://archive.ics.uci.edu/dataset/31/covertype](Forest Cover Type Prediction Dataset): The dataset consists of various features like elevation, aspect, slope, and distances to predict forest cover types. It contains 581,012 instances and 54 features.
+[Forest Cover Type Prediction Dataset](https://archive.ics.uci.edu/dataset/31/covertype): The dataset consists of various features like elevation, aspect, slope, and distances to predict forest cover types. It contains 581,012 instances and 54 features.
 
 ## Model
 
