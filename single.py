@@ -1,5 +1,6 @@
 import time
 import os
+import resource
 from pyspark.sql import SparkSession
 import numpy as np
 import gc
@@ -13,9 +14,8 @@ def preprocess_single_row(row, feature_names):
     return row_df
 
 def get_memory_usage():
-    process = psutil.Process(os.getpid())
-    mem = process.memory_info().rss
-    return mem
+    usage = resource.getrusage(resource.RUSAGE_SELF)
+    return usage.ru_maxrss
 
 # Загрузка модели
 with open('/output/dt_model.pkl', 'rb') as file:

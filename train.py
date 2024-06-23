@@ -6,6 +6,7 @@ import pickle
 
 # Загрузка данных
 df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/covtype/covtype.data.gz', header=None)
+df.to_csv('covtype.data', index=False, header=False)
 
 # Присвоение имен столбцам
 column_names = ["Elevation", "Aspect", "Slope", "Horizontal_Distance_To_Hydrology", "Vertical_Distance_To_Hydrology",

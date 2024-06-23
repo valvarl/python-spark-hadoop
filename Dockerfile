@@ -11,12 +11,9 @@ RUN pip3 install tqdm
 
 USER 1001
 
-COPY ./ram_time_values.csv /output/ram_time_values.csv
 COPY ./dt_model.pkl /output/dt_model.pkl
 COPY ./parallel.py /scripts/parallel.py
 COPY ./single.py /scripts/single.py
-
-RUN chmod -R 777 /output
 
 # Установка Spark
 ENV SPARK_HOME /opt/bitnami/spark
